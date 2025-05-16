@@ -1,0 +1,135 @@
+:root {
+  --color-primary: #0a0a23;
+  --color-primary-light: #0a0a23be;
+  --color-grey-1: #eee;
+  --color-grey-2: #ddd;
+  --color-text: #222;
+  --color-text-functions: rgb(251, 137, 7);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "open sans";
+  color: var(--color-grey-2);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator {
+  padding: 2rem;
+  background-color: var(--color-primary);
+  width: 45rem;
+  border-radius: 5px;
+}
+
+.calc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.toggle_input {
+  display: none;
+}
+
+.toggle_label {
+  width: 5rem;
+  height: 2.5rem;
+  border: 1px solid;
+  border-radius: 10rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #aaa;
+    position: absolute;
+    left: 0.2rem;
+    transition: all 0.5s;
+  }
+}
+
+.toggle_input:checked + .toggle_label {
+  background-color: #fff;
+  border: 1px solid #0a0a23;
+}
+
+.toggle_input:checked + .toggle_label::before {
+  background-color: #0a0a23;
+  left: 60%;
+}
+
+input {
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.query,
+.answer {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: right;
+  font-size: 3.5rem;
+}
+
+.wrapper {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  font-size: 3rem;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.functions {
+  color: var(--color-text-functions);
+}
+
+.values-wrap {
+  flex: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.functions-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

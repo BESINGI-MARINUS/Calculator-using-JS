@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple calculator app with JavaScript</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <header class="calc-header">
+          <h1 class="title">scientific calculator</h1>
+          <div class="toggle">
+            <input type="checkbox" class="toggle_input" id="theme" />
+            <label for="theme" class="toggle_label"></label>
+          </div>
+        </header>
+        <input type="text" class="answer" readonly />
+        <input type="text" class="query" />
+        <div class="wrapper">
+          <div class="values-wrap">
+            <button class="btn functions clear-btn">AC</button>
+            <button class="btn functions del-btn">DEL</button>
+            <button class="btn functions" value="%">%</button>
+            <button class="btn" value="9">9</button>
+            <button class="btn" value="8">8</button>
+            <button class="btn" value="7">7</button>
+            <button class="btn" value="6">6</button>
+            <button class="btn" value="5">5</button>
+            <button class="btn" value="4">4</button>
+            <button class="btn" value="3">3</button>
+            <button class="btn" value="2">2</button>
+            <button class="btn" value="1">1</button>
+            <button class="btn" value="0">0</button>
+            <button class="btn" value="00">00</button>
+            <button class="btn" value=".">.</button>
+          </div>
+          <div class="functions-wrap">
+            <button class="btn functions" value="/">/</button>
+            <button class="btn functions" value="-">-</button>
+            <button class="btn functions" value="*">X</button>
+            <button class="btn functions" value="+">+</button>
+            <button class="btn functions equal-sign">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
